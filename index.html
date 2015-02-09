@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class='main'>
+    <div class='first'>some content</div>
+    <div class='second will-deleted'><div>and more content</div></div>
+</div>
+<div id="mocha"></div>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/chai/chai.js"></script>
+<script src="node_modules/chai-jquery/chai-jquery.js"></script>
+<script src="node_modules/mocha/mocha.js"></script>
+<script>mocha.setup('bdd');</script>
+<script src="script.js"></script>
+<script src="spec.js"></script>
+
+<script>
+    mocha.checkLeaks();
+    mocha.globals(['jQuery']);
+    mocha.run();
+</script>
+</body>
+</html>

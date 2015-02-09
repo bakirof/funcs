@@ -1,0 +1,15 @@
+body{
+    font-family:sans-serif;
+}
+.main{
+
+    width:90%;
+padding:20px;
+    border:1px solid black;
+}
+.black{
+
+    color:black;
+    text-shadow: 0px 1px 1px black;
+
+}
